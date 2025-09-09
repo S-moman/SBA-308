@@ -78,24 +78,32 @@ const LearnerSubmissions = [
 
 function getLearnerData(course, ag, submissions) {
     const result = []
-
+    let student125Avg = submissions[0].submission.score + submissions[1].submission.score;
+    let student132Avg = submissions[3].submission.score + submissions[4].submission.score;
+    let totalPoints = ag.assignments[0].points_possible + ag.assignments[1].points_possible;
+    let totalAvg125 = student125Avg / totalPoints
+    let totalAvg132 = student132Avg / totalPoints
+    let submission1 = submissions[i].submission.score
+    console.log(submission1);
+    console.log(totalAvg132);
  
 
     for(let i = 0; i < submissions.length; i++ ) {
         let report = {}
         
         report.id = submissions[i]['learner_id']
-        for(j = 0; j < submissions.length; j++) {
+        // for(j = 0; j < submissions.length; j++) {
             
-            if(submissions.learner_id == 125) {
-                let avgScore = 
-                console.log(avgScore);
-            }
-        }
-        report.avg = submissions[i].submission;
+        //     if(submissions.learner_id == 125) {
+        //         let avgScore = 
+        //         console.log(avgScore);
+        //     }
+        // }
+        report.avg = submissions[i].submission.score;
         report.assignment_id = submissions[0]['assignment_id']
         report.assignment_id2 = submissions[1]['assignment_id']
         result.push(report)
+        result.push()
     
         console.log(report);
     }
