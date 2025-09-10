@@ -84,7 +84,7 @@ function getLearnerData(course, ag, submissions) {
     let report = {};
 
     report.id = submissions[i]["learner_id"];
-    report.avg = getAvg(47, 50)
+    report.avg = submissions[i].submission.score
   
      let x = true;
     
@@ -106,6 +106,12 @@ function getLearnerData(course, ag, submissions) {
       return score1 + score2
     }
     console.log(getAvg(39, 140));
+
+
+
+    // function getAssign1() {
+    //   for(let assignment1 of )
+    // }
 
   console.log(result);
 
