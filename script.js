@@ -78,22 +78,13 @@ const LearnerSubmissions = [
 
 function getLearnerData(course, ag, submissions) {
   const result = [];
-  // let student125Avg = submissions[0].submission.score + submissions[1].submission.score;
-  // let student132Avg = submissions[3].submission.score + submissions[4].submission.score;
-  // let totalPoints = ag.assignments[0].points_possible + ag.assignments[1].points_possible;
-  // let totalAvg125 = student125Avg / totalPoints
-  // let totalAvg132 = student132Avg / totalPoints
-  // let submission1Avg1 = submissions[0].submission.score/ag.assignments[0].points_possible
-  // let submission1Avg2 = submissions[1].submission.score/ag.assignments[1].points_possible
-  // let points_possible1 = ''
-  // let points_possible2 = ''
-  // console.log(totalPoints);
-  // console.log(totalAvg132);
+  
 
   for (let i = 0; i < submissions.length; i++) {
     let report = {};
 
     report.id = submissions[i]["learner_id"];
+    report.avg = submissions[i].submission.score
     // console.log(report);
      let x = true;
     // if (result.length < 1) {
@@ -109,17 +100,11 @@ function getLearnerData(course, ag, submissions) {
         console.log(report);
     
     }
-    // for(j = 0; j < submissions.length; j++) {
 
-    //     if(submissions.learner_id == 125) {
-    //         let avgScore =
-    //         console.log(avgScore);
-    //     }
-    // }
-    // report.avg = submissions[i].submission.score + '/' + totalPoints;
-    // report.Avg = student125Avg + '/' + totalPoints
-    // report.assignment_id_1  = submissions[i].submission.score/ag.assignments[i]['points_possible']
-    // report.assignment_id_2 = submissions[i].submission.score/ag.assignments[i]['points_possible']
+
+
+  
+   
 
     // result.push(report)
 
@@ -159,9 +144,9 @@ function getLearnerData(course, ag, submissions) {
 
 const result = getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions);
 
-console.log(result);
-console.log(AssignmentGroup);
-console.log(LearnerSubmissions);
+// console.log(result);
+// console.log(AssignmentGroup);
+// console.log(LearnerSubmissions);
 
 // SBA-308
 
