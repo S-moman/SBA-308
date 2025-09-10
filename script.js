@@ -84,12 +84,10 @@ function getLearnerData(course, ag, submissions) {
     let report = {};
 
     report.id = submissions[i]["learner_id"];
-    report.avg = submissions[i].submission.score
-    // console.log(report);
+    report.avg = getAvg(47, 50)
+  
      let x = true;
-    // if (result.length < 1) {
-    //   result.push(report);
-    // }
+    
    for (j = 0; j < result.length; j++) {
       if (result[j].id === report.id) {
         x = false;
@@ -100,16 +98,14 @@ function getLearnerData(course, ag, submissions) {
         console.log(report);
     
     }
-
-
-
-  
-   
-
     // result.push(report)
-
     // console.log(report);
   }
+
+    function getAvg(score1, score2) {
+      return score1 + score2
+    }
+    console.log(getAvg(39, 140));
 
   console.log(result);
 
